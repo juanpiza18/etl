@@ -14,8 +14,8 @@ Then, perform simple analysis queries on the stored data. See: [analysis noteboo
 ## Getting started
 
 First, install the dependencies
-```
-$ pip install -r requirements.txt
+```bash
+pip install -r requirements.txt
 ```
 > Note: preferable, run under a virtualenv 
 > 
@@ -27,14 +27,8 @@ $ pip install -r requirements.txt
 
 Second, run the main pipeline file
 
-```
-$ python pipeline.py
-Data Pipeline created
-	 extracting data from source ....
-	 formatting and transforming data ...
-	 loading into database ...
-
-Done. See: result in "db.sqlite"
+```bash
+python pipeline.py
 ```
 
 <hr>
