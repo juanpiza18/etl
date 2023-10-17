@@ -13,15 +13,17 @@ Then, perform simple analysis queries on the stored data. See: [analysis noteboo
 
 ## Getting started
 
-First, install the dependencies
+First, make sure to have [Python 3.12](https://www.python.org/downloads/) installed
+
+Then, install the project dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 > Note: preferable, run under a virtualenv 
 > 
 > ```
-> $ virtualenv .env -p python3
-> $ source .env/bin/activate
+> $ python -m venv venv
 > $ pip install -r requirements.txt
 > ```
 
