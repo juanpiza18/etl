@@ -97,7 +97,7 @@ class Pipeline(object):
             "unemployment", db.conn, if_exists="append", index=False
         )
         self.unemployment_year.to_csv(
-            "data/results/unemployment_year_results.csv", index=False
+            "data/unemployment_year_results.csv", index=False
         )
  
  
