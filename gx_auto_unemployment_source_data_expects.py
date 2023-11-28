@@ -7,14 +7,18 @@ data = archivo_xls.parse('Unemployment Med HH Income')
 data.to_csv('data/Unemployment.csv', index=False, encoding='ISO-8859-1')'''
 
 validator = context.sources.pandas_default.read_excel(
-    "data/Unemployment.xls"
+    "data/Unemployment.xls",
+    skiprows=7
 )
+
+print(validator)
 
 datasource_name = "unemployment"
 datasource = context.sources.add_pandas(datasource_name)
 asset = datasource.add_excel_asset(
     "unemployment",
-    "data/Unemployment.xls"
+    "data/Unemployment.xls",
+    skiprows=7
 )
 
 batch_request = datasource.get_asset("unemployment").build_batch_request()

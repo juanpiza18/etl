@@ -2,7 +2,8 @@ import great_expectations as gx
 
 context = gx.get_context()
 validator = context.sources.pandas_default.read_excel(
-    "data/Unemployment.xls"
+    "data/Unemployment.xls",
+    skiprows=7
 )
 
 # Completeness

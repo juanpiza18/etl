@@ -1,7 +1,8 @@
 import sqlite3
 import pandas as pd
  
- 
+# TODO: Fix this - after merging branch transformation-tests this code stops working
+#  I will fix it in the PR for Mariana's exercises
 class Pipeline(object):
     def __init__(self):
         self.population = None
