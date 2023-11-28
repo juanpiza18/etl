@@ -46,4 +46,3 @@ context.save_expectation_suite(expectation_suite)
 checkpoint_result = checkpoint.run()
 
 context.open_data_docs()
-
