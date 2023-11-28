@@ -26,7 +26,7 @@ def test_extracted_population_contains_all_expected_columns():
     'POPESTIMATE2016',
     'POPESTIMATE2017',
   ]
-  
+
   assert set(expected_columns).issubset(set(pipeline.population.columns.to_list()))
 
 def test_extracted_population_columns():
