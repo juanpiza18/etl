@@ -1,8 +1,6 @@
 import sqlite3
 import pandas as pd
- 
-# TODO: Fix this - after merging branch transformation-tests this code stops working
-#  I will fix it in the PR for Mariana's exercises
+
 class Pipeline(object):
     def __init__(self):
         self.population = None
@@ -62,9 +60,10 @@ class Pipeline(object):
         self.unemployment_year["Mean"] = mean_values
  
         # Add postal code to dataset
- 
+
+        # First Error: file extension name is missing de final X
         postal_code = pd.read_excel(
-            "data/georef-united-states-of-america-state.xls", header=0
+            "data/georef-united-states-of-america-state.xlsx", header=0
         )
         df1 = self.unemployment_year.merge(
             postal_code,
