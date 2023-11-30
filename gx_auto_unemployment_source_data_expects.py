@@ -2,16 +2,11 @@ import great_expectations as gx
 import pandas as pd
 
 context = gx.get_context()
-'''archivo_xls = pd.ExcelFile('data/Unemployment.xls')
-data = archivo_xls.parse('Unemployment Med HH Income')
-data.to_csv('data/Unemployment.csv', index=False, encoding='ISO-8859-1')'''
 
 validator = context.sources.pandas_default.read_excel(
     "data/Unemployment.xls",
     skiprows=7
 )
-
-print(validator)
 
 datasource_name = "unemployment"
 datasource = context.sources.add_pandas(datasource_name)

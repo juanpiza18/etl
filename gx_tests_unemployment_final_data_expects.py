@@ -24,8 +24,6 @@ validator = context.get_validator(
     expectation_suite_name=expectation_suite_name,
 )
 
-print(validator.head())
-
 # Completeness
 validator.expect_column_values_to_not_be_null(column="FIPStxt")
 validator.expect_column_values_to_not_be_null(column="State")
@@ -48,7 +46,7 @@ validator.expect_column_values_to_be_of_type(column="Year", type_="INTEGER")
 validator.expect_column_values_to_be_of_type(column="unemployment_rate", type_="REAL")
 
 # Uniqueness
-validator.expect_column_unique_value_count_to_be_between(column="FIPStxt", min_value=0, max_value=72153)
+validator.expect_compound_columns_to_be_unique(['FIPStxt', 'Year'])
 
 # Consistency
 validator.expect_column_values_to_be_in_set(
@@ -118,7 +116,7 @@ validator.expect_column_values_to_be_between(
 )
 validator.expect_column_values_to_be_between(column="FIPStxt", min_value=0, max_value=72153)
 
-validator.expect_table_row_count_to_equal(101525)
+validator.expect_table_row_count_to_equal(65500)
 
 # Save expectation Suite
 validator.save_expectation_suite(discard_failed_expectations=False)
