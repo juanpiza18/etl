@@ -1,7 +1,6 @@
 import sqlite3
 import pandas as pd
- 
- 
+
 class Pipeline(object):
     def __init__(self):
         self.population = None
@@ -61,9 +60,10 @@ class Pipeline(object):
         self.unemployment_year["Mean"] = mean_values
  
         # Add postal code to dataset
- 
+
+        # First Error: file extension name is missing the final X
         postal_code = pd.read_excel(
-            "data/georef-united-states-of-america-state.xls", header=0
+            "data/georef-united-states-of-america-state.xlsx", header=0
         )
         df1 = self.unemployment_year.merge(
             postal_code,
@@ -112,6 +112,10 @@ class DB(object):
         self.conn.close()
  
     def __init_db(self):
+        # Drop the tables if they exist
+        self.cur.execute("DROP TABLE IF EXISTS population;")
+        self.cur.execute("DROP TABLE IF EXISTS unemployment;")
+
         table1 = f"""CREATE TABLE IF NOT EXISTS population(
               CBSA INTEGER,
               MDIV REAL,
