@@ -135,8 +135,22 @@ this will generate a report for some expectations.
 
 
 ## Expectations Test Results - Exercise 3
+### Automatic expectations for File
+Run the following command to generate the result for the extracted data expectations, 
+this will generate a report for some expectations.
+```bash
+ python ./unemployment_year_results_gx_auto_expects.py
+```
+![gx_extracted_data_report_1](testResults/postal_code_gx_auto/report_1.PNG)
+![gx_extracted_data_report_2](testResults/postal_code_gx_auto/report_2.PNG)
+![gx_extracted_data_report_3](testResults/postal_code_gx_auto/report_3.PNG)
+
+
+### Some expectations for Exercise 3
 Run the following command to generate the result for the extracted data expectations, 
 this will generate a report for some expectations.
 ```bash
  python ./unemployment_year_results_expectations.py 
 ```
+
+![gx_extracted_data_report_1](testResults/postal_code_expectations/report_1.PNG)
