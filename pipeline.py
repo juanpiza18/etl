@@ -99,8 +99,6 @@ class Pipeline(object):
         self.unemployment.to_sql(
             "unemployment", db.conn, if_exists="append", index=False
         )
-        # Target: Final file created based on the horizontal transformation from unemployment data source
-        # and postal codes.
         self.unemployment_year.to_csv(
             "data/unemployment_year_results.csv", index=False
         )
