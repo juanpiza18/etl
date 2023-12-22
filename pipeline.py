@@ -62,6 +62,9 @@ class Pipeline(object):
         # Add postal code to dataset
 
         # First Error: file extension name is missing the final X
+        # Horizontal Transformation involves merging the original unemployment_year DataFrame with additional
+        # postal code information. The merge is based on a common key, the "State" column. As a result, new columns
+        # containing postal code information are added horizontally to each row in the original DataFrame
         postal_code = pd.read_excel(
             "data/georef-united-states-of-america-state.xlsx", header=0
         )
