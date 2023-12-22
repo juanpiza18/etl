@@ -73,7 +73,7 @@ UNEMPLOYMENT BY COUNTY
 	- description:
 		see the sheet "Variable Descriptions" in the same `xls` file
 
-## Expectations Test Results
+## Expectations Test Results - Exercise 2
 Before running any of these scripts please run the python pipeline.py to generate de db.sqlite
 
 ### gx_auto_unemployment_source_data_expects file 
@@ -133,3 +133,10 @@ this will generate a report for some expectations.
 
 ![gx_extracted_data_report_5](testResults/unemployment_extracted_data/gx_extracted_data_report_5.PNG)
 
+
+## Expectations Test Results - Exercise 3
+Run the following command to generate the result for the extracted data expectations, 
+this will generate a report for some expectations.
+```bash
+ python ./unemployment_year_results_expectations.py 
+```
